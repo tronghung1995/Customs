@@ -1,0 +1,49 @@
+<odoo>
+
+    <record id="demo_view_tree" model="ir.ui.view">
+        <field name="name">Enmasys Study</field>
+        <field name="model">project.study</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name ="name" />
+                <field name ="dateline" />
+                <field name ="state" widget="selection" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="demo_view_form" model="ir.ui.view">
+        <field name="name">Enmasys Study</field>
+        <field name="model">project.study</field>
+        <field name="arch" type="xml">
+        <form>
+            <group>
+            <field name="name" />
+            </group>
+            <group>
+                <group>
+                    <field name ="state" widget="selection" />
+                    <field name ="assign_to" />
+                </group>
+                <group>
+                    <field name ="dateline" />
+                    <field name ="note" />
+                </group>
+            </group>
+            <group>
+                <field name ="description" />
+            </group>
+        </form>
+        </field>
+    </record>
+
+    <record id="act_window" model="ir.actions.act_window">
+        <field name="name">Enmasys Project Study</field>
+        <field name="res_model">project.study</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_study_parent" name="Project Study" sequence = "1"/>
+    <menuitem id="menu_study_children" name="Project Study" parent="menu_study_parent" action = "act_window" groups = "base.group_user" />
+
+</odoo>
