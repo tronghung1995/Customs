@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-accect_project_study1,test,model_project_study1,base.group_user,1,1,1,1
+accect_project_study,test,model_project_study,base.group_user,1,1,1,1
