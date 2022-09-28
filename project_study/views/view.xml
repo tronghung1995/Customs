@@ -17,22 +17,24 @@
         <field name="model">project.study</field>
         <field name="arch" type="xml">
         <form>
-            <group>
-            <field name="name" />
-            </group>
-            <group>
+            <sheet>
+                <h1>
+                    <field name="name" class="o_task_name text-truncate" placeholder="Name" />
+                </h1>
                 <group>
-                    <field name ="state" widget="selection" />
-                    <field name ="assign_to" />
+                    <group>
+                        <field name ="state" widget="selection" />
+                        <field name ="assign_to" />
+                    </group>
+                    <group>
+                        <field name ="dateline" />
+                        <field name ="note" />
+                    </group>
                 </group>
                 <group>
-                    <field name ="dateline" />
-                    <field name ="note" />
+                    <field name ="description" />
                 </group>
-            </group>
-            <group>
-                <field name ="description" />
-            </group>
+            </sheet>
         </form>
         </field>
     </record>
