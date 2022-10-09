@@ -7,7 +7,7 @@
             <tree>
                 <field name ="name" />
                 <field name ="dateline" />
-                <field name ="state" />
+                <field name ="status" />
             </tree>
         </field>
     </record>
@@ -23,7 +23,7 @@
                 </h1>
                 <group>
                     <group>
-                        <field name ="state" widget="selection" />
+                        <field name ="status" widget="selection" />
                         <field name ="assign_to" />
                     </group>
                     <group>
